@@ -1,0 +1,57 @@
+<zk xmlns:x="xhtml">
+<div vflex="min" hflex="min">
+<button id="toggle" sclass="imgbutton" image="/imgs/table.png" tooltiptext="Grid Toggle"/>
+        <grid>
+           <columns>
+                <column hflex="min"/>
+                <column hflex="max"/>
+            </columns>
+            <rows>
+             <row>
+                    <label value="Fee Id :" width="150px" />
+                    <combobox tabindex="1"></combobox>
+                </row>
+                <row>
+                    <label value="Student Id :" width="150px" />
+                    <combobox tabindex="1"></combobox>
+                </row>
+                <row>
+                    <label value="Fee Type Id :" width="150px" />
+                    <combobox tabindex="1"></combobox>
+                </row>
+                <row>
+                    <label value="Status" width="150px" />
+                    <hlayout>
+                       <checkbox id="l1" label="IsActive" tabindex="3"/>
+                    </hlayout>
+                </row>
+                <row>
+                    <label value="Search Key :" width="150px" />
+                    <textbox value="@bind(fx.password)"
+                        sclass="textbox" tabindex="4" />
+         
+                </row>
+            </rows>
+        </grid>
+        </div>
+        
+        <div id="data" visible="false" height="90%">
+					<listbox id="detailListbox"
+						emptyMessage="No user found in the result">
+						<listhead>
+							<listheader label="Fee" />
+							<listheader label="Fee Id" />
+							<listheader label="Student Id" />
+							<listheader label="Fee Type Id" />
+							<listheader label="Status" />
+							<listheader label="Search Key" />
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.email}"></listcell>
+								<listcell label="${each.phone}"></listcell>
+							</listitem>
+						</template>
+					</listbox>
+				</div>
+</zk>

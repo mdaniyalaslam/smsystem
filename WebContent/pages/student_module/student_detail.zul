@@ -1,0 +1,26 @@
+<zk>
+	<div vflex="1" hflex="1">
+		<grid>
+			<columns>
+				<column hflex="min" />
+				<column hflex="1" />
+			</columns>
+			<rows>
+				<row>
+					<label value="Roll Number" width="150px" />
+					<intbox width="150px" tabindex="1" />
+				</row>
+				<row>
+					<label value="Status" width="150px" />
+					<checkbox id="l1" label="IsActive" tabindex="2" />
+				</row>
+				<row>
+					<label value="Search Key" width="150px" />
+					<textbox width="150px" tabindex="3" />
+				</row>
+			</rows>
+		</grid>
+		<button label="Submit" sclass="submitButton"/>
+	</div>
+
+</zk>

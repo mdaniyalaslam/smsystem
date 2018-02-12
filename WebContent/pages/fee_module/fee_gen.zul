@@ -1,0 +1,103 @@
+<zk xmlns:x="xhtml">
+<div vflex="min" hflex="min">
+<button id="toggle" sclass="imgbutton" image="/imgs/table.png" tooltiptext="Grid Toggle"/>
+	<grid>
+		<columns>
+			<column hflex="min" />
+			<column hflex="max" />
+		</columns>
+		<rows>
+			<row>
+				<label value="Fee Master Id" width="150px" />
+				<hlayout>
+					<listbox mold="select" tabindex="1">
+						<listitem label="Wahaj" value="" />
+						<listitem label="Salman" value="" />
+						<listitem label="Zohaib" value="" />
+						<listitem label="Daniyal" value="" />
+					</listbox>
+				</hlayout>
+			</row>
+			<row>
+				<label value="Fee Detail Id" width="150px" />
+				<hlayout>
+					<listbox mold="select" tabindex="2">
+						<listitem label="Wahaj" value="" />
+						<listitem label="Salman" value="" />
+						<listitem label="Zohaib" value="" />
+						<listitem label="Zohaib" value="" />
+					</listbox>
+				</hlayout>
+			</row>
+			<row>
+				<label value="Fee Type Id" width="150px" />
+				<hlayout>
+					<listbox mold="select" tabindex="3">
+						<listitem label="Wahaj" value="" />
+						<listitem label="Salman" value="" />
+						<listitem label="Zohaib" value="" />
+						<listitem label="Zohaib" value="" />
+					</listbox>
+				</hlayout>
+			</row>
+			<row>
+				<label value="Student Master Id" width="150px" />
+				<hlayout>
+					<listbox mold="select" tabindex="4">
+						<listitem label="Wahaj" value="" />
+						<listitem label="Salman" value="" />
+						<listitem label="Zohaib" value="" />
+						<listitem label="Zohaib" value="" />
+					</listbox>
+				</hlayout>
+			</row>
+			<row>
+				<label value="Fee Amount" width="150px" />
+				<intbox sclass="textbox" tabindex="5" />
+
+			</row>
+			<row>
+				<label value="Discount Amount" width="150px" />
+				<intbox sclass="textbox" tabindex="6" />
+
+			</row>
+			<row>
+				<label value="Recieved Amount" width="150px" />
+				<intbox sclass="textbox" tabindex="7" />
+
+			</row>
+			<row>
+				<label value="Status" width="150px" />
+				<hlayout>
+					<checkbox id="l1" label="IsActive" tabindex="8" />
+				</hlayout>
+			</row>
+			<row>
+				<label value="Search Key" width="150px" />
+				<textbox type="password" sclass="textbox" tabindex="9" />
+
+			</row>
+		</rows>
+	</grid>
+	</div>
+	
+	<div id="data" visible="false" height="90%">
+					<listbox id="detailListbox"
+						emptyMessage="No user found in the result">
+						<listhead>
+							<listheader label="Fee Amount" />
+							<listheader label="Discount Amount" />
+							<listheader label="Recieved Amount" />
+							<listheader label="Status" />
+							<listheader label="Search Key" />
+							
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.email}"></listcell>
+								<listcell label="${each.phone}"></listcell>
+							</listitem>
+						</template>
+					</listbox>
+				</div>
+</zk>

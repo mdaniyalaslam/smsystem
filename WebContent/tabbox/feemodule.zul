@@ -1,0 +1,32 @@
+<zk xmlns:x="xhtml">
+	<style>
+		.nav_toolbar .z-toolbarbutton-content i { font-size: 20px;}
+		.nav_tabs .z-tabpanel { padding: 0; border-bottom: 0 none;}
+		.nav_tabs .z-tabpanels .z-toolbarbutton-content { padding: 4px;}
+		.nav_category { cursor:pointer; } .nav_text { color: #696569;
+		font-size : 24px; font-weight: bold;}
+	</style>
+	<tabbox width="100%" sclass="nav_tabs" id="tbx" apply="sm.MainController">
+		<tabs id="tabs">
+			<tab label="Fee Master" id="fm">
+			</tab>
+			<tab label="Fee Details" id="fd"/>
+			<tab label="Fee Generation" id="fg"/>
+		</tabs>
+		<tabpanels>
+			<tabpanel>
+				<include id="incfm" src="/pages/fee_module/fee_master.zul"></include>
+				<button label="Submit" sclass="submitButton" id="submit_fm"/>
+			</tabpanel>
+			<tabpanel>
+				<include src="/pages/fee_module/fee_detail.zul"></include>
+				<button label="Submit" sclass="submitButton" id="submit_fd"/>
+			</tabpanel>
+			<tabpanel>
+				<include src="/pages/fee_module/fee_gen.zul"></include>
+				<button label="Submit" sclass="submitButton" id="submit_fg"/>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+	
+</zk>

@@ -1,0 +1,66 @@
+<zk xmlns:x="xhtml">
+	<!--  <tabbox id="tb" mold="accordion" height="100%"
+		apply="sm.MainController">
+		<tabs>
+			<tab id="master">
+				<caption>
+					<label>Section Master</label>
+					<button id="edit" label="Edit" mold="os" />
+				</caption>
+			</tab>
+		</tabs>
+		<tabpanels height="100%">
+			<tabpanel hflex="1" vflex="1">-->
+				<div id="form" vflex="min" hflex="min">
+				<button id="toggle" sclass="imgbutton" image="/imgs/table.png" tooltiptext="Grid Toggle"/>
+					<grid>
+						<columns>
+							<column hflex="min" />
+							<column />
+						</columns>
+						<rows>
+							<row>
+								<label value="Section Name"
+									width="150px" />
+								<textbox sclass="textbox" tabindex="1" />
+							</row>
+							<row>
+								<label value="Status" width="150px" />
+								<checkbox id="status" label="IsActive"
+									tabindex="2" />
+							</row>
+							<row>
+								<label value="Search Key" width="150px" />
+								<hbox hflex="1">
+									<textbox sclass="textbox" tabindex="2" />
+									
+								</hbox>
+							</row>
+						</rows>
+					</grid>
+					<button id="classSubmit"
+										label="Submit" sclass="submitButton" />
+				</div>
+				<div id="data" visible="false" height="100%">
+					<listbox id="detailListbox" height="100%"
+						emptyMessage="No user found in the result">
+						<listhead>
+							<listheader label="Class Name" />
+							<listheader label="Status" />
+							<listheader label="Search Key" />
+						</listhead>
+						<template name="model">
+							<listitem>
+								<listcell label="${each.email}"></listcell>
+								<listcell label="${each.phone}"></listcell>
+							</listitem>
+						</template>
+
+					</listbox>
+				</div>
+		<!-- 	</tabpanel>
+		</tabpanels>
+	</tabbox> -->
+
+
+</zk>

@@ -1,0 +1,85 @@
+<zk>
+	<div apply="period_module.PeriodController">
+		<button id="toggle" iconSclass="z-icon-table" sclass="imgbutton"
+			tooltiptext="Grid Toggle" />
+		<button id="New" iconSclass="z-icon-file-text"
+			sclass="imgbutton" />
+		<div id="form" vflex="min" hflex="min">
+			<grid>
+				<columns>
+					<column hflex="min" />
+					<column hflex="min" />
+					<column hflex="1" align="left"/>
+				</columns>
+				<rows>
+					<row>
+						<label value="Period Name" />
+						<intbox id="name" constraint="no negative" tabindex="1" maxlength="4"/>
+						<label value="Format: YYYY"/>
+					</row>
+					<row>
+						<label value="No of Terms" />
+						<intbox id="terms" tabindex="2" constraint="no negative" maxlength="2"/>
+					</row>
+					<row>
+						<label value="No of Tests" />
+						<intbox id="tests" tabindex="3" maxlength="3"/>
+					</row>
+					<row>
+						<label value="Start From" />
+						<datebox id="from" tabindex="4"/>
+					</row>
+					<row>
+						<label value="End In"/>
+						<datebox id="to" tabindex="5"/>
+					</row>
+					<row>
+						<label value="Status"/>
+						<checkbox id="status" label="IsActive"
+							tabindex="6" />
+					</row>
+					<row>
+						<label value="Search Key"/>
+						<textbox id="key" tabindex="7"/>
+					</row>
+				</rows>
+			</grid>
+			<button label="Submit" sclass="submitButton" id="submit_ap"/>
+		</div>
+		<div id="data" visible="false" height="90%">
+			<listbox id="periodListbox" forward="onDoubleClick=periodListbox.onPeriodEdit"
+				emptyMessage="No user found in the result">
+				<listhead>
+					<listheader label="Period Name" />
+					<listheader label="No Of Terms" />
+					<listheader label="No Of Tests" />
+					<listheader label="From" />
+					<listheader label="To" />
+					<listheader label="Active" />
+					<listheader label="Search Key" />
+					<listheader hflex="min" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="${each.name}"></listcell>
+						<listcell label="${each.terms}"></listcell>
+						<listcell label="${each.tests}"></listcell>
+						<listcell label="${each.from}"></listcell>
+						<listcell label="${each.to}"></listcell>
+						<listcell label="${each.status}"></listcell>
+						<listcell label="${each.value}"></listcell>
+						<listcell>
+							<button
+								forward="onClick=periodListbox.onPeriodEdit"
+								sclass="imgbutton edit" iconSclass="z-icon-pencil-square" />
+							<button
+								forward="onClick=periodListbox.onPeriodDelete"
+								sclass="imgbutton delete" iconSclass="z-icon-trash" />
+						</listcell>
+					</listitem>
+				</template>
+			</listbox>
+		</div>
+	</div>
+
+</zk>

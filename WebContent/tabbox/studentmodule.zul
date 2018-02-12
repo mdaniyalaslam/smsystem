@@ -1,0 +1,31 @@
+<zk xmlns:x="xhtml">
+<style>
+		.nav_toolbar .z-toolbarbutton-content i { font-size: 20px;}
+		.nav_tabs .z-tabpanel { padding: 0; border-bottom: 0 none;}
+		.nav_tabs .z-tabpanels .z-toolbarbutton-content { padding: 4px;}
+		.nav_category { cursor:pointer; } .nav_text { color: #696569;
+		font-size : 24px; font-weight: bold;}
+	</style>
+	<tabbox width="100%" sclass="nav_tabs">
+		<tabs id="tabs">
+			<tab label="Student Master" />
+			<tab label="Student Details" />
+			<tab label="Student Discount" />
+			<tab label="Student Fine" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>
+				<include src="/pages/student_module/student_master.zul"></include>
+			</tabpanel>
+			<tabpanel>
+				<include src="/pages/student_module/student_detail.zul"></include>
+			</tabpanel>
+			<tabpanel>
+				<include src="/pages/student_module/student_discount.zul"></include>
+			</tabpanel>
+			<tabpanel>
+				<include src="/pages/student_module/student_fine.zul"></include>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</zk>

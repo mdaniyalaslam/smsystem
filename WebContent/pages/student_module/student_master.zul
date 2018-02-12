@@ -1,0 +1,52 @@
+<zk xmlns:x="xhtml">
+<div vflex="1" hflex="1">
+	<grid >
+		<columns>
+			<column hflex="min"/>
+			<column hflex="min"/>
+			<column hflex="min"/>
+			<column />
+		</columns>
+		<rows>
+			<row>
+				<label value="Student Name :" width="150px" />
+				<textbox  tabindex="1" />
+				<label value="Student Registration Number" />
+				<intbox  tabindex="2" />
+			</row>
+			<row>
+				<label value="Address :" />
+				<textbox  tabindex="3" />
+				<label value="Town" />
+				<textbox  tabindex="4" />
+			</row>
+			<row>
+				<label value="City :" />
+				<textbox constraint="no empty" 
+					maxlength="15" tabindex="5" />
+				<label value="LandLine" />
+				<intbox  tabindex="6" />
+			</row>
+			<row>
+				<label value="Cell Number :" />
+				<intbox  tabindex="7" />
+				<label value="Joining Class" />
+				<textbox constraint="no empty"
+					maxlength="15" tabindex="5" />
+			</row>
+			<row>
+				<label value="Admission Date :" />
+				<datebox  tabindex="7" />
+			</row>
+			<row>
+				<label value="Status :" width="150px" />
+				<checkbox id="l1" label="IsActive" tabindex="3" />
+				<label value="Search Key :" width="150px" />
+				<textbox tabindex="4" />
+
+			</row>
+		</rows>
+	</grid>
+	<button label="Submit" sclass="submitButton"/>
+	</div>
+</zk>

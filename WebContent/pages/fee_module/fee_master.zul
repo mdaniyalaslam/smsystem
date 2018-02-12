@@ -1,0 +1,169 @@
+<zk xmlns:x="xhtml">
+	<div apply="fee_module.FeeController">
+		<button id="toggle" iconSclass="z-icon-table" sclass="imgbutton"
+			tooltiptext="Grid Toggle" />
+		<button id="New" iconSclass="z-icon-file-text"
+			sclass="imgbutton" />
+		<div id="form" vflex="min" hflex="max" visible="true">
+			<grid>
+				<columns>
+					<column hflex="min" />
+					<column hflex="max" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Period Id :" width="150px" />
+						<combobox id="countriesCombobox"
+							model="${form$composer.countriesModel}" autodrop="true">
+							<template name="model">
+								<comboitem label="${each}" />
+							</template>
+						</combobox>
+
+					</row>
+					<row>
+						<label value="Class Id :" width="150px" />
+						<combobox tabindex="1"></combobox>
+					</row>
+					<row>
+						<label value="Status :" width="150px" />
+						<hlayout>
+							<checkbox id="l1" label="IsActive"
+								tabindex="3" />
+						</hlayout>
+					</row>
+					<row>
+						<label value="Search Key :" width="150px" />
+						<hbox>
+							<textbox type="text" sclass="textbox" tabindex="4" />
+
+						</hbox>
+					</row>
+				</rows>
+			</grid>
+		</div>
+		<div id="data" visible="false" height="90%">
+			<listbox id="detailListbox"
+				emptyMessage="No user found in the result">
+				<listhead>
+					<listheader label="Class Name" />
+					<listheader label="Status" />
+					<listheader label="Search Key" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="${each.email}"></listcell>
+						<listcell label="${each.phone}"></listcell>
+					</listitem>
+				</template>
+			</listbox>
+		</div>
+
+
+		<!--<div apply="sms.MainController" height="100%">
+			<div sclass="breadcrumb">
+			<label>Fee Master</label>
+			<button id="edit" label="Edit" mold="os" />
+			</div>
+			
+			<div id="form" vflex="min" hflex="max" visible="true">
+			<grid>
+			<columns>
+			<column label="Fee" hflex="min" />
+			<column label="Master" hflex="max" />
+			</columns>
+			<rows>
+			<row>
+			<label value="Period Id" width="150px" />
+			<combobox tabindex="1"></combobox>
+			
+			</row>
+			<row>
+			<label value="Class Id" width="150px" />
+			<combobox tabindex="1"></combobox>
+			</row>
+			<row>
+			<label value="Status" width="150px" />
+			<hlayout>
+			<checkbox id="l1" label="IsActive"
+			tabindex="3" />
+			</hlayout>
+			</row>
+			<row>
+			<label value="Search Key" width="150px" />
+			<hbox>
+			<textbox type="text"
+			value="@bind(fx.password)" width="250px" tabindex="4" />
+			<button label="Submit"
+			sclass="submitButton" />
+			</hbox>
+			</row>
+			</rows>
+			</grid>
+			
+			</div>
+			<div id="data" visible="false" height="90%">
+			<listbox id="detailListbox"
+			emptyMessage="No user found in the result">
+			<listhead>
+			<listheader label="Class Name" />
+			<listheader label="Status" />
+			<listheader label="Search Key" />
+			</listhead>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			
+			<template name="model">
+			<listitem>
+			<listcell label="${each.email}"></listcell>
+			<listcell label="${each.phone}"></listcell>
+			</listitem>
+			</template>
+			
+			</listbox>
+			</div>
+			</div>-->
+	</div>
+</zk>

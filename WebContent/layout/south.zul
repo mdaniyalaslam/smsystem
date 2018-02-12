@@ -1,0 +1,6 @@
+<div	hflex="1"	vflex="1"> 				
+	<vbox	hflex="1"	vflex="1"	align="center" sclass="footer">
+		You are using 1.0.0 version of SMS (School Management System)						
+		<a	href="http://www.burkitech.com" target="_blank">http://www.burkitech.com</a> 				
+	</vbox> 
+</div> 

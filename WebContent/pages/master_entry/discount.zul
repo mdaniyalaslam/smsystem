@@ -1,0 +1,30 @@
+<zk xmlns:x="xhtml">
+    <div vflex="min" hflex="min">
+    <button id="toggle" sclass="imgbutton" image="/imgs/table.png" tooltiptext="Grid Toggle"/>
+        <grid >
+            <columns>
+                <column hflex="min"/>
+                <column hflex="max"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="Discount Name" width="150px" />
+                        <textbox value=""
+                            sclass="textbox" tabindex="1" />
+                </row>
+                <row>
+                    <label value="Description" width="150px" />
+                    <textbox sclass="textbox" tabindex="2" />
+         
+                </row>
+                <row>
+                    <label value="Search Key" width="150px" />
+                    <textbox value=""
+                        sclass="textbox" tabindex="3" />
+                </row>
+            </rows>
+        </grid>
+        <button label="Submit" sclass="submitButton"/>
+    </div>
+
+</zk>

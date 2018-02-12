@@ -1,0 +1,8 @@
+<div apply="rep.IReport" height="100%">
+	<div id="div" height="100%">
+		<jasperreport id="report" height="100%" 
+		type="pdf" 	
+		/>
+	</div>
+</div>
+
